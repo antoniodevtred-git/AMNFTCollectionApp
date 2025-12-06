@@ -1,4 +1,38 @@
 📘 README (ESPAÑOL)
+📦 Dependencias (Foundry) — ES
+
+Para compilar y testear el proyecto necesitas instalar las librerías:
+
+# Desde la raíz del repo
+forge install OpenZeppelin/openzeppelin-contracts@v5.0.2
+forge install foundry-rs/forge-std
+
+
+Crea (o actualiza) remappings.txt en la raíz del proyecto con:
+
+@openzeppelin/=lib/openzeppelin-contracts/
+forge-std/=lib/forge-std/src/
+
+
+Ignora directorios generados y dependencias en .gitignore (recomendado):
+
+lib/
+out/
+cache/
+broadcast/
+
+
+Verifica la compilación:
+
+forge build
+
+
+Nota: tras clonar el repo en una máquina nueva, recuerda ejecutar:
+
+forge install
+
+
+para restaurar lib/ antes de compilar y testear.
 ✅ Objetivo
 
 DApp/contrato para mintear NFTs (mint-only). Cada token necesita su URI de metadatos y las imágenes se alojan en IPFS.
@@ -84,6 +118,40 @@ forge script script/TU_SCRIPT.s.sol:NombreDelContrato \
   --etherscan-api-key $ETHERSCAN_API_KEY
 
 📙 README (ENGLISH)
+📦 Dependencies (Foundry) — EN
+
+To build and test the project you need these libraries:
+
+# From the project root
+forge install OpenZeppelin/openzeppelin-contracts@v5.0.2
+forge install foundry-rs/forge-std
+
+
+Create (or update) remappings.txt at the project root:
+
+@openzeppelin/=lib/openzeppelin-contracts/
+forge-std/=lib/forge-std/src/
+
+
+Ignore generated dirs and deps in .gitignore (recommended):
+
+lib/
+out/
+cache/
+broadcast/
+
+
+Build to verify:
+
+forge build
+
+
+Note: after cloning the repo on a fresh machine, remember to run:
+
+forge install
+
+
+to restore lib/ before building and testing.
 ✅ Goal
 
 Mint-only ERC721. Each token needs its metadata URI; images and metadata are hosted on IPFS.
